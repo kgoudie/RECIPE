@@ -27,6 +27,8 @@
 }
 .nav-dish img {
   border-radius: 50%;
+  width: 40px;
+  height: 40px
 }
 .nav-dish {
   cursor: pointer;
@@ -34,6 +36,13 @@
   flex-direction: column;
   align-items: center;
 }
+.custom-svg {
+    stroke-width: 1.5;
+    stroke: white;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
 .sign-in {
   grid-area: signin;
   display: flex;
@@ -57,6 +66,11 @@
 .search svg {
   background-color: red;
 }
+.custom-title {
+    font-family: Bebas Neue, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
 .main {
   display: grid;
   grid-template-columns: 0.1fr 0.5fr 0.4fr;
@@ -79,6 +93,34 @@
 .main-icon p {
   color: red;
 }
+.save {
+    width: 40px;
+    height: 40px;
+    stroke-width: 1.5;
+    stroke: #EB5428;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.share {
+    width: 40px;
+    height: 40px;
+    stroke-width: 1.5;
+    stroke: #EB5428;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.print, .jump {
+  width: 40px;
+  height: 40px;
+  stroke-width: 1.5;
+  stroke: #EB5428;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .main-content {
   padding: 20px;
 }
@@ -123,7 +165,6 @@ h2 {
 }
 p, li {
   font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
@@ -146,6 +187,12 @@ p, li {
   flex-wrap: wrap;
   gap: 5px;
 }
+.side-dish-title {
+    font-family: Bebas Neue, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+} 
 footer {
   display: grid;
   grid-template-columns: 0.2fr 0.5fr;
@@ -154,6 +201,11 @@ footer {
   align-items: center;
   grid-template-areas: "chef social";
 }
+.copyright {
+    font-family: Bebas Neue, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
 .chef {
   display: flex;
   align-items: center;
@@ -162,6 +214,8 @@ footer {
 }
 .chef img {
   border-radius: 50%;
+  width:200px; 
+  height:200px;
 }
 .social-media {
   display: flex;
@@ -169,9 +223,17 @@ footer {
   justify-self: flex-end;
   grid-area: social;
 }
-.social-media svg {
-  cursor: pointer;
+
+.facebook, .instagram, .youtube, .tiktok {
+    stroke: #EB5428;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    width: 40px;
+    height: 40px;
+    stroke-width: 1.5;
 }
+
 .title {
   text-align: center;
 }
