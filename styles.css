@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav {
+  display: grid;
+  grid-template-columns: 0.1fr 0.8fr 0.1fr;
+  grid-template-areas: "logo dishes signin" "search search search";
+  padding: 10px;
+  align-items: center;
+  row-gap: 20px;
+}
+.logo {
+  grid-area: logo;
+}
+.ham {
+  display: none;
+}
+.nav-dishes {
+  grid-area: dishes;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  gap: 40px;
+}
+.nav-dish img {
+  border-radius: 50%;
+}
+.nav-dish {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sign-in {
+  grid-area: signin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.search {
+  grid-area: search;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+}
+.search input {
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+  border: 2px solid red;
+}
+.search svg {
+  background-color: red;
+}
+.main {
+  display: grid;
+  grid-template-columns: 0.1fr 0.5fr 0.4fr;
+}
+.main-img img {
+  width: 100%;
+  height: 700px;
+}
+.main-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 40px;
+  padding-top: 20px;
+  border: 2px solid red;
+}
+.main-icon {
+  cursor: pointer;
+}
+.main-icon p {
+  color: red;
+}
+.main-content {
+  padding: 20px;
+}
+.all-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #0d0d0d;
+  color: #7abfbf;
+  padding: 10px;
+}
+.details {
+  display: flex;
+  align-items: center;
+  gap: 200px;
+}
+.detail {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.detail-attr {
+  font-weight: bold;
+}
+.ing-dir {
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+.ing-dir h2 {
+  margin-bottom: 15px;
+}
+.dir h2 {
+  text-align: center;
+}
+h2 {
+  font-family: Bebas Neue, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+p, li {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.side-dishes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+.side-dish img {
+  width: 100%;
+  height: 300px;
+}
+.side-dishes-main {
+  padding: 20px;
+  background-color: rgba(122, 191, 191, 0.5);
+}
+.side-dish {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+footer {
+  display: grid;
+  grid-template-columns: 0.2fr 0.5fr;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-areas: "chef social";
+}
+.chef {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  grid-area: chef;
+}
+.chef img {
+  border-radius: 50%;
+}
+.social-media {
+  display: flex;
+  gap: 80px;
+  justify-self: flex-end;
+  grid-area: social;
+}
+.social-media svg {
+  cursor: pointer;
+}
+.title {
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .nav {
+    grid-template-areas: "logo search signin" "dishes dishes dishes";
+  }
+  .sign-in {
+    justify-self: flex-end;
+  }
+  .title {
+    text-align: left;
+  }
+  .main {
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+  .main-icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 80px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(219, 206, 206, 0.8);
+    border: none;
+  }
+  .all-details {
+    background-color: white;
+    color: black;
+  }
+  .details {
+    display: block;
+  }
+  .detail {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .side-dishes {
+    grid-template-columns: 1fr 1fr;
+  }
+  .side-dish {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .side-dish img {
+    height: 100px;
+    width: 100px;
+  }
+  .chef {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .ham {
+    display: block;
+    grid-area: ham;
+  }
+  .nav {
+    grid-template-columns: 0.2fr 0.6fr 0.2fr;
+    grid-template-areas: "ham logo signin" "search search search";
+  }
+  .nav-dishes {
+    display: none;
+  }
+  .logo {
+    align-self: center;
+    justify-self: center;
+  }
+  .main-icons {
+    background-color: white;
+    position: static;
+  }
+  .main {
+    position: static;
+  }
+  .main-icons {
+    gap: 40px;
+  }
+  .main-icon svg {
+    width: 20px;
+  }
+  .main-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .all-details {
+    display: block;
+  }
+  .all-details h2 {
+    text-align: center;
+  }
+  .ing-dir {
+    grid-template-columns: 1fr;
+  }
+  .ing h2 {
+    text-align: center;
+  }
+  .side-dishes {
+    grid-template-columns: 1fr;
+  }
+  .side-dishes-main h2 {
+    margin: 10px;
+  }
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-areas: "social" "chef";
+    gap: 20px;
+  }
+  .social-media {
+    gap: 60px;
+  }
+}
